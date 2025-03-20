@@ -28,4 +28,8 @@ RSpec.describe StringCalculator do
     it 'should raise error when negative numbers are in string' do
       expect{StringCalculator.new.add('//;\n1;2;3;-1')}.to raise_error('negatives not allowed')
     end
+
+    it 'should include negative numbers in error message when there are negative numbers in string' do
+      expect{StringCalculator.new.add('//;\n1;2;3;-1')}.to raise_error('negatives not allowed -1')
+    end
 end
