@@ -11,7 +11,7 @@ class StringCalculator
             numbers = computed_str[1]
             numbers=numbers.gsub(delimiter, ",")
         end
-        numbers.gsub("\\n", ", ").split(",").sum(&:to_i)
+        numbers.gsub("\\n", ", ").split(",").map(&:to_i).reject{|x| x >1000}.sum
     end
 
     class << self
