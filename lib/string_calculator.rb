@@ -7,7 +7,7 @@ class StringCalculator
         validate_negatives(numbers)
         if numbers.start_with?("//")
             computed_str = numbers.split("\\n")
-            delimiter = computed_str[0].gsub("//", "")
+            delimiter = computed_str[0].gsub("//", "").gsub("]", "").gsub("[", "")
             numbers = computed_str[1]
             numbers=numbers.gsub(delimiter, ",")
         end

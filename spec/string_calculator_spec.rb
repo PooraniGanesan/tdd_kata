@@ -40,4 +40,8 @@ RSpec.describe StringCalculator do
     it 'should avoid numbers greater than 1000' do
       expect(StringCalculator.new.add("1,2,3,4,1999")).to eq(10)
     end
+
+    it 'should accpet delimters of any length' do
+      expect(StringCalculator.new.add('//[***]\n1***2***3”')).to eq(6)
+    end
 end
