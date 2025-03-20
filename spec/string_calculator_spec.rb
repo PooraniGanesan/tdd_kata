@@ -44,4 +44,8 @@ RSpec.describe StringCalculator do
     it 'should accpet delimters of any length' do
       expect(StringCalculator.new.add('//[***]\n1***2***3”')).to eq(6)
     end
+
+    it 'should accept multiple delimters' do
+      expect(StringCalculator.new.add('//[*][;]\n1*2;3”')).to eq(6)
+    end
 end
