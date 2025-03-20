@@ -24,4 +24,8 @@ RSpec.describe StringCalculator do
     it 'should return sum of numbers with differnt delimiter(*) specified at the start of the string' do
       expect(StringCalculator.new.add('//*\n3*2')).to eq(5)
     end
+
+    it 'should raise error when negative numbers are in string' do
+      expect{StringCalculator.new.add('//;\n1;2;3;-1')}.to raise_error('negatives not allowed')
+    end
 end
