@@ -14,14 +14,12 @@ class StringCalculator
         numbers.gsub("\\n", ", ").split(",").sum(&:to_i)
     end
 
-
-  class << self
-    def get_called_count
-      @called_count += 1
-      @called_count
+    class << self
+        def get_called_count
+        @called_count += 1
+        @called_count
+        end
     end
-  end
-
 
     private
     def validate_negatives(numbers)

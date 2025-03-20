@@ -36,4 +36,8 @@ RSpec.describe StringCalculator do
     it 'should return no.of times string calculator is invoked' do
       expect(StringCalculator.get_called_count()).to eq(9)
     end
+
+    it 'should avoid numbers greater than 1000' do
+      expect(StringCalculator.new.add("1,2,3,4,1999")).to eq(10)
+    end
 end
