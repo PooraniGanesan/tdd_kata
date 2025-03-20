@@ -11,6 +11,9 @@ RSpec.describe StringCalculator do
 
     it 'should return sum of unknown amount of numbers in a string' do
       expect(StringCalculator.new.add('10, 10, 10, 10, 10, 10, 10, 10, 10, 10')).to eq(100)
+    end
 
+    it 'should return sum of numbers with new line delimiter' do
+      expect(StringCalculator.new.add('1\n2,3')).to eq(6)
     end
 end
