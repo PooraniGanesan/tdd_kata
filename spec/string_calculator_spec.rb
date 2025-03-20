@@ -34,7 +34,6 @@ RSpec.describe StringCalculator do
     end
 
     it 'should return no.of times string calculator is invoked' do
-      pending 'get called count implementation'
-      expect(StringCalculator.get_called_count()).to eq(7)
+      expect(StringCalculator.get_called_count()).to eq(9)
     end
 end
